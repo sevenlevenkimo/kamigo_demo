@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   #Greeting
   get "你好嗎", to: "home#greeting.line.erb"
 
+   #dice
+   get "骰", to: "home#dice"
+
   # LINE Login 登入
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks'
