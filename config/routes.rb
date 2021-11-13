@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: "home#index"
   get "index", to: "home#index"
 
+  #Greeting
+  get "你好嗎", to: "home#greeting.line.erb"
+
   # LINE Login 登入
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks'
